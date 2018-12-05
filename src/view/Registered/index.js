@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, Icon, Input, Button, Row, Col,AutoComplete } from "antd";
+import { Form, Icon, Input, Button, Row,message, Col,AutoComplete } from "antd";
 import "./index.scss";
 import axios from 'axios';
 class Registered extends Component {
@@ -24,9 +24,14 @@ class Registered extends Component {
   }
 
   handleEmail(){
-    // console.log(this.state.emailInput)
+    // 获取邮箱的值
     let inputValue=this.state.emailInput
-    axios.post('http://127.0.0.1:3000/email',{
+    let emailreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+
+    if(inputValue==''||!emailreg.test(inputValue)){
+      message.error('您输入的邮箱错误！');
+    }else{
+  axios.post('http://127.0.0.1:3000/email',{
       email:inputValue,
   })
   .then((res) => {
@@ -35,6 +40,9 @@ class Registered extends Component {
   .catch((err) => {
       console.log(err);
   })
+    }
+
+  
   }
   // 邮箱输入框验证
   handleChangeEmail = (value) => {

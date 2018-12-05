@@ -1,0 +1,62 @@
+.registered {
+  width: 100%;
+  min-height: calc(100vh - 114px);
+  background: #fafafa;
+  .layout-container {
+    max-width: 1056px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    .lark-form {
+      padding-top: 24px;
+      width: 430px;
+      margin: auto;
+      .lark-form-main {
+        background-color: #fff;
+        padding: 56px 8px 72px;
+        margin-bottom: 64px;
+        border: 1px solid #e9e9e9;
+        border-radius: 4px;
+        .lark-form-logo {
+          max-width: 320px;
+          margin: 0 auto;
+          text-align: center;
+          padding-bottom: 24px;
+          img {
+            width: 56px;
+            height: 56px;
+          }
+        }
+
+        .lark-form-content {
+          margin: 0 auto;
+          border-radius: 4px;
+          font-size: 14px;
+          text-align: center;
+          .account-register{
+              padding: 0 40px;
+          }
+          .account-slogon {
+            .account-slogon-main {
+              font-size: 24px;
+              line-height: 32px;
+              color: #262626;
+            }
+            .account-slogon-subhead {
+              color: #595959;
+              margin-top: 12px;
+            }
+            .account-slogon-subhead {
+              color: #595959;
+            }
+          }
+          .login-form-button{
+              width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

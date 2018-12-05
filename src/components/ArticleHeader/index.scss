@@ -1,0 +1,38 @@
+.header {
+  z-index: 999;
+  width: 100%;
+  top: 0;
+  height: 60px;
+  -webkit-transition: box-shadow 0.3s ease-in;
+  transition: box-shadow 0.3s ease-in;
+  font-size: 14px;
+  position: fixed;
+  opacity: 1;
+  .doc-head-inner {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    .lark-breadcrumb-logo{
+        
+    }
+    .header-back {
+      width: 60px;
+      height: 60px;
+      float: left;
+      text-align: center;
+      line-height: 60px;
+      font-size: 16px;
+      color: #595959;
+      border-right: 1px solid #e8e8e8;
+      .larkicon{
+        display: inline-block;
+        font-style: normal;
+        vertical-align: baseline;
+        text-align: center;
+        text-transform: none;
+        line-height: 1;
+        text-rendering: auto;
+      }
+    }
+  }
+}
